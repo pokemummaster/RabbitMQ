@@ -1,0 +1,20 @@
+server:
+  port: 8001
+spring:
+  #给项目来个名字
+  application:
+    name: rabbitmq-provider
+  #配置rabbitMq 服务器
+  rabbitmq:
+    host: 192.168.13.132
+    port: 5672
+    username: wujifu
+    password: 123456
+    #虚拟host 可以不设置,使用server默认host
+    virtual-host: wujifu
+    #消息确认配置项
+
+    #确认消息已发送到交换机(Exchange)
+    publisher-confirms: true
+    #确认消息已发送到队列(Queue)
+    publisher-returns: true
